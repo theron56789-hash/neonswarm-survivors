@@ -11,7 +11,7 @@ jobs:
         run: |
           apt-get update
           apt-get install -y imagemagick unzip curl git cmake build-essential python3
-          dkp-pacman -Syu --noconfirm 3ds-dev
+          dkp-pacman -S --noconfirm --needed 3ds-dev || echo 'package update skipped'
       - name: Make icon, banner, silent audio
         run: |
           convert -size 48x48 xc:'#0b0b1a' -fill '#33ffff' -draw "circle 24,24 24,38" icon.png
