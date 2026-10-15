@@ -44,6 +44,12 @@ AccessControlInfo:
   RunnableOnSleep               : false
   SpecialMemoryArrange          : true
   ResourceLimitCategory         : Application
+  HandleTableSize               : 512
+  IORegisterMapping:
+   - 1ff50000-1ff57fff
+   - 1ff70000-1ff77fff
+  MemoryMapping:
+   - 1f000000-1f5fffff:r
   SystemCallAccess:
     ArbitrateAddress: 34
     Break: 60
