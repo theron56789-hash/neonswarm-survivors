@@ -35,6 +35,8 @@ jobs:
           makerom -f cia -o neonswarm.cia -elf neonswarm.elf -rsf app.rsf -icon neonswarm.smdh -banner banner.bnr -exefslogo -target t
       - uses: actions/upload-artifact@v4
         with:
-          name: neonswarm-cia
-          path: neonswarm.cia
+          name: neonswarm-all
+          path: |
+            neonswarm.cia
+            neonswarm.3dsx
           if-no-files-found: error
